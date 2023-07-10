@@ -11,7 +11,6 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableJpaRepositories
-@Repository
 public class H2DbConfig {
 
     @Bean
@@ -26,6 +25,6 @@ public class H2DbConfig {
 
     @Bean
     public JdbcTemplate jdbcTemplate(DataSource dataSource) {
-        return jdbcTemplate(dataSource);
+        return new JdbcTemplate(dataSource);
     }
 }

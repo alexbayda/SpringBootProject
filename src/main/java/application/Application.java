@@ -1,10 +1,12 @@
 package application;
 
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 @Component
+@SpringBootApplication
 public class Application {
 
     private final UserService userService;
