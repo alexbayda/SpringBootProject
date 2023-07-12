@@ -1,18 +1,26 @@
 spring:
   datasource:
+#    url: jdbc:h2:file:~/h2/userApiValidationAndException
     url: jdbc:h2:mem:testdb
     driverClassName: org.h2.Driver
     username: sa
     password: password
   jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
     database-platform: org.hibernate.dialect.H2Dialect
     defer-datasource-initialization: true
   h2:
     console:
       enabled: true
       path: /h2-console
-  profiles.active: default
+  profiles:
+    active: default
+
+
 ---
+
 spring:
   profiles: default
 
@@ -22,7 +30,9 @@ doge:
   very: true
 
 ---
+
 spring:
   profiles: unit-test
+
 doge:
   wow: 4
