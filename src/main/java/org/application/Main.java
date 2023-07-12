@@ -11,7 +11,7 @@ public class Main {
         SpringApplication.run(Application.class, args);
         ApplicationContext context = SpringApplication.run(Main.class, args);
         Application application = context.getBean(Application.class);
-//        application.getUsersFromDb();
+        application.getUsersFromDb();
     }
 
 //    @Bean(initMethod = "start", destroyMethod = "stop")
