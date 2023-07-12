@@ -1,7 +1,10 @@
-package application;
+package org.application;
+
+import lombok.Getter;
 
 import javax.persistence.*;
 
+@Getter
 @Entity
 @Table(name = "users")
 public class User {
@@ -10,6 +13,12 @@ public class User {
     private Long id;
 
     private String partialName;
+
+    private String name;
+
+    public void setName(String name){
+        this.name = name;
+    }
 
     public String getPartialName() {
         return partialName;

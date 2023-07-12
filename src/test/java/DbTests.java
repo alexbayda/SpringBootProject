@@ -1,6 +1,6 @@
-import application.Application;
-import application.H2DbConfig;
-import application.User;
+import org.application.Application;
+import org.application.H2DbConfig;
+import org.application.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -52,9 +52,4 @@ public class DbTests extends AbstractTestNGSpringContextTests {
         Assert.assertFalse(result.isEmpty());
         result.forEach(user -> System.out.println("User: " + user.getId() + ", Name: " + user.getPartialName()));
     }
-
-    //SCRUM + KANBAN + SCRUMBAN, estimation techniques,
-    //Maven lifecycles //gradle task execution order (if can, make your own task and connect it to the test task)
-    //testNG documentation vs Junit5
-    //CICD setup through Jenkins
 }
