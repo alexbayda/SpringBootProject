@@ -53,8 +53,9 @@ public class MySqlTests {
         List<String> users = getUsers("users");
         assertThat(users).contains("Pankesh");
     }
+
     //SCRUM + KANBAN + SCRUMBAN, estimation techniques,
     //Maven lifecycles //gradle task execution order (if can, make your own task and connect it to the test task)
     //testNG documentation vs Junit5
-    //CICD setup through Jenkins
+    //https://testng.org/doc/documentation-main.html#yaml
 }

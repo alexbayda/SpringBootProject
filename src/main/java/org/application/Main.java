@@ -8,10 +8,10 @@ import org.springframework.context.ApplicationContext;
 public class Main {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+//        SpringApplication.run(Application.class, args);
         ApplicationContext context = SpringApplication.run(Main.class, args);
         Application application = context.getBean(Application.class);
-        application.getUsersFromDb();
+        application.getUsersFromDbFromModel();
     }
 
 //    @Bean(initMethod = "start", destroyMethod = "stop")
